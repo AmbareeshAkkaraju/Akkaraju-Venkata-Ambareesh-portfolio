@@ -1,0 +1,354 @@
+:root {
+    --primary-color: #00aeff;
+    --secondary-color: #03dac6;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --header-text-color: #ffffff;
+}
+
+body {
+    padding-top: 56px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: none;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out; /* Only transition transform */
+    z-index: 10000;
+    /* Removed width, height, background-color */
+}
+
+#cursor i {
+    font-size: 20px; /* Size of the star icon */
+    color: var(--primary-color); /* Star color */
+    text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color); /* Initial shine */
+    animation: shine 1.5s infinite alternate; /* Shining animation */
+}
+
+#cursor.hover {
+    /* Removed width, height, background-color */
+    transform: translate(-50%, -50%) scale(1.5); /* Only scale the star */
+}
+
+#cursor.hover i {
+    color: #ffffff; /* White on hover */
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Brighter shine on hover */
+}
+
+@keyframes shine {
+    0% {
+        text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+    }
+    100% {
+        text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+    }
+}
+
+
+.navbar {
+    background-color: transparent !important;
+    transition: all 0.3s ease;
+    padding-top: 1.5rem; /* Increased padding */
+    padding-bottom: 1.5rem; /* Increased padding */
+    z-index: 1030; /* Ensure navbar is on top */
+}
+
+.navbar-scrolled {
+    background-color: rgba(30, 30, 30, 0.8) !important; /* Semi-transparent background */
+    padding-top: 0.8rem; /* Slightly less padding when scrolled */
+    padding-bottom: 0.8rem; /* Slightly less padding when scrolled */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px); /* Apply blur to content behind navbar */
+    -webkit-backdrop-filter: blur(5px); /* For Safari support */
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; /* Reverted margin-top */
+    border: 7px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.progress {
+    background-color: var(--surface-color);
+    border-radius: 5px;
+}
+
+.progress-bar {
+    width: 0;
+    background-color: var(--primary-color);
+    transition: width 1.5s ease-in-out;
+}
+
+.section-divider {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container.left {
+    left: 0;
+}
+
+.timeline-container.right {
+    left: 50%;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--background-color);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.timeline-container.right::after {
+    left: -16px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--surface-color);
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid transparent; /* Make border transparent initially */
+    border-image: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-image-slice: 1;
+    border-radius: 8px; /* Softer corners */
+    overflow: hidden; /* Ensures content respects border-radius */
+    position: relative; /* For pseudo-elements or overlays */
+    z-index: 1; /* Ensure it's above other elements if needed */
+}
+
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+.flag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.blinking-flag {
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+.social-link {
+    display: inline-block;
+    position: relative;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+.social-link .fa-linkedin:hover {
+    color: #0A66C2;
+    filter: drop-shadow(0 0 10px #0A66C2);
+}
+
+.social-link .fa-github:hover {
+    color: #ffffff;
+    filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    transform: scale(0);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.social-link:hover::before {
+    transform: scale(2);
+    opacity: 1;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0 0 10px 5px white;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    animation: glitter 0.5s ease-in-out forwards;
+}
+
+@keyframes glitter {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+.card, .timeline-content {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .timeline-content:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and slightly scale */
+    box-shadow: 0 15px 30px rgba(0, 174, 255, 0.4), 0 8px 8px rgba(0, 174, 255, 0.3); /* More prominent shadow with primary color */
+}
+
+.social-btn {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-btn i {
+    margin-right: 8px;
+}
+
+.linkedin-btn {
+    background-color: #0A66C2;
+}
+
+.github-btn {
+    background-color: #333;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.linkedin-btn:hover {
+    background-color: #0077b5;
+    color: #fff;
+    box-shadow: 0 0 15px #0077b5;
+}
+
+.github-btn:hover {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 0 15px #444;
+}
+
+header#hero {
+    min-height: auto; /* Full viewport height */
+    padding-top: 100px; /* Added padding-top to move content down */
+    overflow: hidden; /* Hide overflowing content during zoom */
+}
+
+#about {
+    margin-top: 0;
+}
+
+.contact-info {
+    font-size: 1rem;
+}

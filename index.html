@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - AIML Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            height: 90%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="cursor"><i class="fas fa-star"></i></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Akkaraju Venkata Ambareesh Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#internships">Internships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" id="view-resume-nav" href="#">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main-content">
+        <header id="hero" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="display-4" data-aos="fade-down">Akkaraju Venkata Ambareesh</h1>
+                        <p class="lead" data-aos="fade-up">Aspiring AI and Machine Learning Engineer</p>
+                        <a href="#projects" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">View My Work</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="profile-picture" data-aos="fade-left">
+                            <img src="Profile Pic for Cognizant.jpg" alt="Your Name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="section-divider">
+            <div class="container">
+                <h2 class="text-center mb-4" data-aos="fade-up">About Me</h2>
+                <p class="lead text-center" data-aos="fade-up" data-aos-delay="100">I am a dedicated and aspiring Artificial Intelligence and Machine Learning Engineer with a strong foundation in computer science. I am passionate about leveraging data-driven solutions to tackle complex, real-world challenges. My objective is to contribute to the development of intelligent systems that are not only efficient and scalable but also create a significant and positive impact. I possess a solid background in Python, a variety of machine learning algorithms, and comprehensive data analysis techniques.</p>
+                <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <button id="view-resume-btn" class="btn btn-primary">View Resume</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-5 section-divider">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-container left" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <h3>10th Grade <span class="flag">Achieved</span></h3>
+                            <p>Dr. Kishore's Ratnam Future Vision High School | 2020</p>
+                            <p>Percentage: 96.5%</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <h3>Intermediate (MPC) <span class="flag">Achieved</span></h3>
+                            <p>Ratnam Junior College | 2020-2022</p>
+                            <p>Percentage: 90%</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <h3>B.Tech CSE (AI & ML) <span class="flag blinking-flag">Pursuing</span></h3>
+                            <p>Mohan Babu University | 2022-2026</p>
+                            <p>Current CGPA: 9.67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-5 section-divider">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Skills</h2>
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <h4>Leadership</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" data-width="90%"></div>
+                        </div>
+                        <h4>Analytics</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" data-width="85%"></div>
+                        </div>
+                        <h4>Teamwork</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" data-width="95%"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <h4>Communication</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" data-width="80%"></div>
+                        </div>
+                        <h4>Problem Solving</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" data-width="90%"></div>
+                        </div>
+                        <h4>Innovation</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar" role="progressbar" data-width="85%"></div>
+                        </div>
+                    </div>
+.
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="card p-3">
+                            <h4 class="text-center">Languages</h4>
+                            <ul>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card p-3">
+                            <h4 class="text-center">Frameworks & Libraries</h4>
+                            <ul>
+                                <li>TensorFlow</li>
+                                <li>PyTorch</li>
+                                <li>Scikit-learn</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card p-3">
+                            <h4 class="text-center">Tools & Platforms</h4>
+                            <ul>
+                                <li>AWS</li>
+                                <li>Google Cloud</li>
+                                <li>Git</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-5 section-divider">
+            <div class="container">
+                <h2 class="text-center mb-4" data-aos="fade-up">Projects</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-up"><div class="card h-100"><img src=https://imgs.search.brave.com/5bAy2xCuf7UlLNHG5Jihy5ADxmEpuSKjQSJPCduqsWg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/c29mdHF1YmVzLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wNC9yZXNlYXJj/aGVkLXBvYy1vbi1o/b3RlbC1wcmljZS1w/cmVkaWN0aW9uLndl/YnA class="card-img-top" alt="Project 1"><div class="card-body"><h5 class="card-title">Hotel Price Prediction(AirBnb)</h5><p class="card-text">This project aims to predict the optimal nightly price for a hotel or Airbnb rental using a machine learning model. The model is trained on a dataset of existing listings, taking into account various features that influence price. These features can include location (e.g., proximity to city center), property details (e.g., number of bedrooms, bathrooms, amenities), host details, and even customer reviews. The trained model can then be used by hosts to set a competitive and profitable price, while guests can use it to find the best deals.</p><a href="https://github.com/AmbareeshAkkaraju/Hotel-Price-Prediction-AirBNB-" class="btn btn-primary" target="_blank">GitHub Link</a></div></div></div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100"><div class="card h-100"><img src="https://imgs.search.brave.com/YZrUlSnHGzW_lm9KkltdlG8eFgmQYBmfkVYfjBeJvGg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9kMzA3/Ymo2OTMzNnZnby5j/bG91ZGZyb250Lm5l/dC93cC1jb250ZW50/L3czLXdlYnAvdXBs/b2Fkcy8yMDI0LzA5/L0JyYWluLXR1bW9y/LWRhdGFzZXQtOS5w/bmd3My53ZWJw" class="card-img-top" alt="Project 2"><div class="card-body"><h5 class="card-title">Medical Insurance Prediction</h5><p class="card-text">The goal of this project is to predict a person's medical insurance premium or charges based on their personal attributes. By using a regression model, the system analyzes historical data containing features like age, gender, BMI, number of dependents, smoking status, and geographical location. The model learns the complex relationships between these factors and the insurance cost, allowing it to provide a data-driven estimate. This helps insurance companies with risk assessment and pricing, and it can also help consumers understand the factors that influence their premiums.</p><a href="https://github.com/AmbareeshAkkaraju/Medical-Prediction" class="btn btn-primary" target="_blank">GitHub Link</a></div></div></div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200"><div class="card h-100"><img src="https://imgs.search.brave.com/UU8p5vdZ1YThqt38TgTPQfYQZT97anazd3ZHscRk9js/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5zbGlkZXNoYXJl/Y2RuLmNvbS9zYWxh/cnlwcmVkaWN0aW9u/cHB0ZmluYWwxNS00/LTI0LTI0MDQxODEz/MDMzNS1jYzQ2MmYw/ZS84NS9QcmVkaWN0/aW5nLVNhbGFyeS1V/c2luZy1EYXRhLVNj/aWVuY2UtQS1Db21w/cmVoZW5zaXZlLUFu/YWx5c2lzLXBkZi0x/LTMyMC5qcGc" class="card-img-top" alt="Project 3"><div class="card-body"><h5 class="card-title">Employment Salary Prediction</h5><p class="card-text">The purpose of this project is to estimate a person's salary based on their professional profile. The machine learning model analyzes historical salary data along with key features such as years of experience, job title, education level, skills, and location. By identifying the most influential factors, the model can provide a predicted salary range. This is useful for both job seekers to negotiate their pay and for companies to ensure fair compensation practices.</p><a href="https://github.com/AmbareeshAkkaraju/Edunet-IBM-Employee-Salary-Prediction" class="btn btn-primary" target="_blank">GitHub Link</a></div></div></div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up"><div class="card h-100"><img src="https://imgs.search.brave.com/PZNbMJHV4wHqdrHodsc59FKakLckS-P9SgxUbY3bgoM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2xvdWRhcHBlci5h/aS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/NC8wNi9BSS1SZXN1/bWUtU2NyZWVuaW5n/LUhvdy1JdC1Xb3Jr/cy1XaHktWW91ci1U/ZWFtLU5lZWRzLUl0/LnBuZw" class="card-img-top" alt="Project 4"><div class="card-body"><h5 class="card-title">Resume Screening</h5><p class="card-text">Resume screening using machine learning is an automated process that evaluates and ranks resumes based on a set of criteria. The system analyzes the text to identify keywords, skills, and experience, then uses this data to score each resume for a job opening. This helps recruiters quickly pinpoint the most qualified candidates, streamlining the hiring process.</p><a href="https://github.com/AmbareeshAkkaraju/Edunet" class="btn btn-primary" target="_blank">GitHub Link</a></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="internships" class="py-5 section-divider">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Internships & Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-container left" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <h3>Adverk Technologies</h3>
+                            <h4>ML Intern</h4>
+                            <p>2 Months</p>
+                            <p>Here I had learnt ML models and the usage of ML models according to the requirement of project</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <h3>Salesforce(Virtual)</h3>
+                            <h4>Platform Developer</h4>
+                            <p>2 Months</p>
+                            <p>Here, I had learnt everything about the salesforce platform and the creation and updation of the fields</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container left" data-aos="fade-right">
+                        <div class="timeline-content">
+                            <h3>Edunet Foundation(IBM-AI)</h3>
+                            <h4>AI&ML Intern</h4>
+                            <p>2 Months</p>
+                            <p>Here, I dive deeper into the AIML concepts and learnt new types of models and algorithms</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container right" data-aos="fade-left">
+                        <div class="timeline-content">
+                            <h3>Apex</h3>
+                            <h4>Web Development Intern</h4>
+                            <p>2 Months</p>
+                            <p>Learnt and implementing the learnt technology in web designing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-5 section-divider">
+            <div class="container">
+                <h2 class="text-center mb-4" data-aos="fade-up">Certifications</h2>
+                <div class="row">
+                    <div class="col-md-3 mb-4" data-aos="fade-up"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Service Now Certified System Administrator</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Edu skills Certified AWS Data Engineer</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Edu Skills Certified Google AI&ML</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Google Cloud Code Vipassana(Season-6, Season-7,Season-9)</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Infosys Certified AI Foundation</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Edu Skills Certified Web Development</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Cisco Certified Python Essentials 1 and Python Essentials 2</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">IBM Certified Supervised Machine Learning(Classification, Regression) , Introduction to AI
+</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Basic Robotics and Behaviors and Odometry</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Data Understanding and Visualization
+</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Predictive Modelling and Analytics</h5></div></div></div>
+                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300"><div class="card h-100"><div class="card-body text-center"><h5 class="card-title">Entrepreneurship (Laying the foundation, Prepare for Launch).</h5></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center" data-aos="fade-up">Get in Touch</h2>
+                <div class="row mt-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-sm-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope fa-2x mb-2"></i>
+                                <p class="contact-info">aaarish1164@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-phone fa-2x mb-2"></i>
+                                <p class="contact-info">+91 99123 42979</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marker-alt fa-2x mb-2"></i>
+                                <p class="contact-info">Nellore, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://www.linkedin.com/in/ambareesh-akkaraju-89989a28a/" class="btn social-btn linkedin-btn me-3"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/AmbareeshAkkaraju" class="btn social-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <iframe src="https://drive.google.com/file/d/1MhB5gWPQATbgU-9o7Qc8Zv0wXa7JzxIv/preview" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
+    <script>
+        var modal = document.getElementById("resume-modal");
+        var btn = document.getElementById("view-resume-btn");
+        var navBtn = document.getElementById("view-resume-nav");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        navBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
